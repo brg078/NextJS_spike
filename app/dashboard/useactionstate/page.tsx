@@ -6,7 +6,11 @@ async function increment(
 	previousState: number,
 	formData: any
 ): Promise<number> {
-    console.log(`in increment function, previousState: ${previousState}, formData: ${JSON.stringify(formData)}`);
+	console.log(
+		`in increment function, previousState: ${previousState}, formData: ${JSON.stringify(
+			formData
+		)}`
+	);
 	return previousState + 1;
 }
 
@@ -14,7 +18,7 @@ async function increment(
 
 export default function StatefulForm() {
 	const [state, formAction] = useActionState(increment, 1);
-    console.log(`in StatefulForm Render: state: ${state}`);
+	console.log(`in StatefulForm Render: state: ${state}`);
 
 	return (
 		<form>
